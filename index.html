@@ -33,6 +33,36 @@
             user-select: none;
         }
 
+        .login-container {
+          width: 100vw;
+          height: 100vh;
+          background-color: lime;
+        }
+
+        .login-grid {
+          grid-row: 2;
+          grid-column: 2;
+        }
+
+        .form-container {
+          display: grid;
+          height: 100vh;
+          width: 100vw;
+          grid-template-columns: 1fr 3fr 1fr;
+          grid-template-rows: 1fr 4fr 5fr;
+        }
+
+        .spaghetti-bowl {
+          grid-column: 2;
+          grid-row: 3;
+        }
+
+        .form-signin .form-control:focus {
+          z-index: 2;
+          border-color: black;
+          box-shadow: 0 0 0 0.2rem rgba(204, 100, 220, 0.45);
+        }
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -42,21 +72,32 @@
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
 </head>
-<body class="text-center">
-<form class="form-signin">
-    <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+<div class="login-container">
+  <div class="form-container">
+    <div class="login-grid">
+      <span class="border border-primary">
+        <body class="text-center">
+        <form class="form-signin">
+            <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+        </form>
+        </body>
+      </span>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
-</form>
-</body>
+    <div class="spaghetti-bowl">
+      <img src="./pasta.png" alt="">
+    </div>
+  </div>
+</div>
 </html>
